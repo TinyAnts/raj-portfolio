@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found · Raj S</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Inter, sans-serif;
+      background: hsl(40 45% 96%);
+      color: hsl(40 12% 11%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      background-image: radial-gradient(hsl(40 12% 11% / .05) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+    .card { max-width: 560px; position: relative; padding: 60px 40px; }
+    .corner { position: absolute; width: 26px; height: 26px; border: 3px solid hsl(38 48% 44%); }
+    .tl { top: 0; left: 0; border-right: 0; border-bottom: 0; }
+    .tr { top: 0; right: 0; border-left: 0; border-bottom: 0; }
+    .bl { bottom: 0; left: 0; border-right: 0; border-top: 0; }
+    .br { bottom: 0; right: 0; border-left: 0; border-top: 0; }
+    .mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: hsl(40 8% 42%); letter-spacing: .08em; text-transform: uppercase; }
+    .num {
+      font-family: Poppins, sans-serif; font-style: italic; font-weight: 600;
+      font-size: clamp(6rem, 20vw, 9.5rem); line-height: 1; color: hsl(152 26% 24%); margin: 10px 0 6px;
+    }
+    h1 { font-family: Poppins, sans-serif; font-weight: 600; font-size: clamp(1.4rem, 4vw, 2rem); margin-bottom: 12px; }
+    p { color: hsl(40 8% 42%); line-height: 1.7; margin-bottom: 30px; font-weight: 400; }
+    a.btn {
+      display: inline-block; text-decoration: none; color: hsl(40 45% 96%); font-weight: 500;
+      padding: 14px 36px; background: hsl(152 26% 24%); border-radius: 6px; transition: background .25s, transform .2s;
+    }
+    a.btn:hover { background: hsl(152 26% 18%); transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+    <div class="mono">fig. 404 · not found</div>
+    <div class="num">404</div>
+    <h1>This page is not in the archive.</h1>
+    <p>The page you're looking for doesn't exist or has moved. Let's get you back to the work.</p>
+    <a class="btn" href="/">Back to the portfolio</a>
+  </div>
+</body>
+</html>
