@@ -72,12 +72,13 @@ const EXPERIENCE: {
   },
   {
     role: "Artificial Intelligence Engineer", org: "Veterinary Information Network",
-    period: "2023 – 2025", location: "California, USA", cat: "industry", icon: Stethoscope,
+    period: "2023 – 2025", location: "Remote (US company)", cat: "industry", icon: Stethoscope,
     desc: "AI engineering for the world's largest online veterinary community, applying machine learning where it helps animal health most.",
   },
   {
     role: "Co-Founder", org: "Zaide.ai",
     period: "2023 – 2024", location: "Remote", cat: "startup", icon: Bot,
+    desc: "Built private, custom large language models for healthcare and life sciences: secure local LLMs designed so sensitive clinical and research data never leaves the organization.",
   },
   {
     role: "Mentor & Alpha Tester", org: "Coursera",
@@ -406,7 +407,7 @@ export default function Home() {
             >
               <div className="eyebrow text-brass mb-7 flex items-center gap-4">
                 <span className="w-11 brass-rule inline-block"></span>
-                AI Engineer · CRISPR Researcher · Founder
+                AI Engineer · CRISPR Researcher · Founder · Future Vet
               </div>
 
               <h1 className="font-heading font-bold text-6xl md:text-7xl leading-[1.02] tracking-tight mb-6">
@@ -418,7 +419,7 @@ export default function Home() {
 
               <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-9 font-light">
                 <strong className="text-foreground font-medium">Nine years of AI in the places it matters:</strong> autonomous
-                trucks in Stockholm, stroke detection in Berlin, veterinary medicine in California, and now
+                trucks in Stockholm, stroke detection in Berlin, AI for the world's largest veterinary community, and now
                 gene editing in Wrocław, where I teach neural networks to design CRISPR experiments.
                 Also halfway to becoming a veterinarian.
               </p>
@@ -447,7 +448,7 @@ export default function Home() {
                 className="flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-muted-foreground"
               >
                 <span className="flex items-center gap-2"><MapPin size={15} className="text-brass" /> Wrocław, Poland</span>
-                <span className="flex items-center gap-2"><Languages size={15} className="text-brass" /> English · Tamil</span>
+                <span className="flex items-center gap-2"><Languages size={15} className="text-brass" /> Bilingual · English (IELTS C1) & Tamil</span>
                 <span className="flex items-center gap-2"><Globe size={15} className="text-brass" /> Worked across 6 countries</span>
               </motion.div>
             </motion.div>
@@ -812,7 +813,8 @@ export default function Home() {
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed font-light">
                 Full scholarship, master's education<br />
-                Partial scholarship, bachelor's education
+                Partial scholarship, bachelor's education<br />
+                IELTS C1, English proficiency
               </p>
             </motion.div>
           </div>
