@@ -154,9 +154,9 @@ const PUBLICATIONS = [
     year: "2026",
     icon: Bot,
     title: "ClaimPilot: An Open Multi-Agent Pipeline for Veterinary Insurance Claims Adjudication",
-    authors: "Shunmugam, N.",
+    authors: "Hoang, M.L. and Shunmugam, N.",
     venue: "Future Internet, 18(9), 465",
-    note: "Sole author · Released a 150-claim open benchmark",
+    note: "Released a 150-claim open benchmark",
     link: "https://doi.org/10.3390/fi18090465",
     linkLabel: "doi.org/10.3390/fi18090465",
   },
@@ -921,7 +921,7 @@ export default function Home() {
               <p className="text-sm text-foreground/85 leading-relaxed font-medium">
                 ClaimPilot: An Open Multi-Agent Pipeline for Veterinary Insurance Claims Adjudication
               </p>
-              <p className="font-mono text-[11px] text-muted-foreground mt-3 mb-5">Future Internet 2026 · sole author</p>
+              <p className="font-mono text-[11px] text-muted-foreground mt-3 mb-5">Future Internet 2026 · 150-claim open benchmark</p>
               <p className="text-sm text-foreground/85 leading-relaxed font-medium">
                 Deep Learning for Hardware-Constrained Cars: Imitation Learning & Deep Reinforcement Learning
               </p>
