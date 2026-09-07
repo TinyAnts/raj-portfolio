@@ -916,8 +916,12 @@ export default function Home() {
             <motion.div {...reveal} transition={{ ...reveal.transition, delay: 0.08 }} className="bg-card border border-ink/15 p-7">
               <div className="flex items-center gap-3 mb-5">
                 <BookOpen size={18} className="text-brass" />
-                <h3 className="font-heading font-semibold text-xl">Publication</h3>
+                <h3 className="font-heading font-semibold text-xl">Publications</h3>
               </div>
+              <p className="text-sm text-foreground/85 leading-relaxed font-medium">
+                ClaimPilot: An Open Multi-Agent Pipeline for Veterinary Insurance Claims Adjudication
+              </p>
+              <p className="font-mono text-[11px] text-muted-foreground mt-3 mb-5">Future Internet 2026 · sole author</p>
               <p className="text-sm text-foreground/85 leading-relaxed font-medium">
                 Deep Learning for Hardware-Constrained Cars: Imitation Learning & Deep Reinforcement Learning
               </p>
