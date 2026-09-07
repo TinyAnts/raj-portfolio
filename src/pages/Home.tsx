@@ -38,7 +38,7 @@ import { Button } from "@/components/ui/button";
 
 import rajProfile from "@/assets/images/raj-profile.webp";
 
-const EMAIL = "arvindraghav21@gmail.com";
+const EMAIL = "ai.vet.ml@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/nagaraj21";
 const MILKAI = "https://milkai.ai";
 const AIVET = "https://aivet.work";
@@ -134,7 +134,7 @@ const EXPERIENCE: {
 
 const EDUCATION = [
   { school: "Hirszfeld Institute of Immunology & Experimental Therapy, PAN", degree: "CRISPR & NGS Data Researcher, Polish Academy of Sciences", period: "2025 – now", note: "Researcher", flag: "🇵🇱" },
-  { school: "Wrocław University of Environmental and Life Sciences (UPWR)", degree: "Veterinary Medicine, Veterinary Surgeon (DVM)", period: "2021 – 2027", note: "In progress", flag: "🇵🇱" },
+  { school: "Wrocław University of Environmental and Life Sciences (UPWR)", degree: "Veterinary Medicine, Veterinary Surgeon (DVM)", period: "2021 – 2026", note: "Graduating Dec 2026", flag: "🇵🇱" },
   { school: "Technische Universität Berlin", degree: "M.Sc. Autonomous Systems, Robotics & AI specialization", period: "2018 – 2021", note: "Full scholarship", flag: "🇩🇪" },
   { school: "KTH Royal Institute of Technology", degree: "M.Sc. Autonomous Systems, Robotics & AI specialization", period: "2018 – 2021", note: "EIT Digital double degree", flag: "🇸🇪" },
   { school: "Aalto University", degree: "EIT Digital Summer School: Disrupting Retail", period: "2019", note: "Digitalization & growth", flag: "🇫🇮" },
@@ -146,6 +146,47 @@ const SKILL_GROUPS = [
   { title: "Genomics & Biomedical", icon: Dna, skills: ["CRISPR Guide Design", "NGS & Multi-Omics Data", "k-mer / One-Hot Encodings", "Medical Computer Vision", "Biomedical Sensors"] },
   { title: "Autonomous Systems", icon: Car, skills: ["Object Detection & Segmentation", "Depth Estimation", "LiDAR Point Clouds", "Sensor Fusion (GPS·IMU·Radar)", "NVIDIA Jetson Deployment"] },
   { title: "Engineering & Leadership", icon: Rocket, skills: ["Technical Leadership", "IoT & Embedded (Arduino)", "3D Printing", "CI/CD & Product Delivery", "Teaching & Mentorship"] },
+];
+
+const PUBLICATIONS = [
+  {
+    type: "Journal article",
+    year: "2026",
+    icon: Bot,
+    title: "ClaimPilot: An Open Multi-Agent Pipeline for Veterinary Insurance Claims Adjudication",
+    authors: "Shunmugam, N.",
+    venue: "Future Internet, 18(9), 465",
+    note: "Sole author · Released a 150-claim open benchmark",
+    link: "https://doi.org/10.3390/fi18090465",
+    linkLabel: "doi.org/10.3390/fi18090465",
+  },
+  {
+    type: "Conference paper",
+    year: "2020",
+    icon: Car,
+    title: "Deep Learning for Hardware-Constrained Driverless Cars",
+    authors: "Sreedhar, S. and Shunmugam, N.",
+    venue: "IEEE Conference Publication",
+    note: null,
+    link: "https://ieeexplore.ieee.org/document/9202838",
+    linkLabel: "ieeexplore.ieee.org/document/9202838",
+  },
+  {
+    type: "Oral presentation",
+    year: "2026",
+    icon: Dna,
+    title: "Attention-Based Imputation of Structural Variants: genotype prediction in low- and high-linkage-disequilibrium genomes",
+    authors: "Shunmugam, N., Jawor, P. and Szyda, J.",
+    venue: "7th Polish Congress of Genetics, Wrocław · September 2026",
+    note: "First author",
+    link: null,
+    linkLabel: null,
+  },
+];
+
+const PUB_EXTRAS = [
+  { icon: Presentation, text: "Invited keynote speaker, AI Vet Conference 2024 and 2025" },
+  { icon: FlaskConical, text: "Two manuscripts in preparation (Hirszfeld Institute, 2026)" },
 ];
 
 const CERTS = [
@@ -319,6 +360,7 @@ export default function Home() {
     { id: "about", label: "About" },
     { id: "experience", label: "Experience" },
     { id: "education", label: "Education" },
+    { id: "publications", label: "Publications" },
     { id: "skills", label: "Skills" },
   ];
 
@@ -418,10 +460,11 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-9 font-light">
-                <strong className="text-foreground font-medium">Nine years of AI in the places it matters:</strong> autonomous
-                trucks in Stockholm, stroke detection in Berlin, AI for the world's largest veterinary community, and now
-                gene editing in Wrocław, where I teach neural networks to design CRISPR experiments.
-                Also halfway to becoming a veterinarian.
+                <strong className="text-foreground font-medium">Nine years of building AI where it counts:</strong> autonomous
+                trucks in Stockholm, stroke detection in Berlin, machine learning for the world's
+                largest veterinary community, and now veterinary medicine and gene editing in Wrocław,
+                where I teach neural networks to design CRISPR experiments. This December, I graduate
+                as a veterinarian.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-11">
@@ -484,8 +527,8 @@ export default function Home() {
                   <div className="text-[10px] text-muted-foreground mt-0.5">Hirszfeld Institute</div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.95 }} className="absolute -left-12 bottom-14 z-20 bg-card border border-ink/15 shadow-lg px-3.5 py-2.5 animate-float hidden md:block" style={{ animationDelay: "1.4s" }}>
-                  <div className="flex items-center gap-2 text-xs font-semibold"><Stethoscope size={13} className="text-brass" /> DVM 2027</div>
-                  <div className="text-[10px] text-muted-foreground mt-0.5">future veterinarian</div>
+                  <div className="flex items-center gap-2 text-xs font-semibold"><Stethoscope size={13} className="text-brass" /> DVM · Dec 2026</div>
+                  <div className="text-[10px] text-muted-foreground mt-0.5">graduating veterinarian</div>
                 </motion.div>
               </motion.div>
 
@@ -565,7 +608,7 @@ export default function Home() {
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 font-light text-lg">
                 Today I do CRISPR machine-learning research at the Hirszfeld Institute in Wrocław,
-                run a product studio as CTO of MilkAI, and I'm halfway through veterinary school, because the thing I actually want to build is the bridge between AI and animal medicine.
+                run a product studio as CTO of MilkAI, and this December I finish veterinary school, because the thing I actually want to build is the bridge between AI and animal medicine.
               </p>
               <div className="border-l-2 border-accent pl-5 py-1">
                 <p className="font-heading-italic text-xl text-foreground/90">"Excited to find my life's purpose!"</p>
@@ -577,7 +620,7 @@ export default function Home() {
               {[
                 { icon: Dna, no: "01", title: "CRISPR × AI", text: "ML for guide design & off-target prediction on genomic data" },
                 { icon: Bot, no: "02", title: "Multi-Agent Systems", text: "AI agents that design and validate wet-lab protocols" },
-                { icon: Stethoscope, no: "03", title: "Veterinary Medicine", text: "DVM candidate, class of 2027. AI for animal health." },
+                { icon: Stethoscope, no: "03", title: "Veterinary Medicine", text: "DVM candidate, graduating December 2026. AI for animal health." },
                 { icon: Rocket, no: "04", title: "Building Products", text: "MilkAI: idea → production-ready app, at startup speed" },
               ].map((c, i) => (
                 <motion.div
@@ -720,6 +763,80 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 4b. PUBLICATIONS */}
+      <section id="publications" className="py-24 bg-card relative overflow-hidden">
+        <FloatIcon Icon={BookOpen} className="top-16 right-[5%] text-forest/10" size={48} delay="0.8s" />
+        <FloatIcon Icon={Microscope} className="bottom-20 left-[3%] text-brass/15" size={42} delay="1.6s" />
+        <div className="container mx-auto px-6 md:px-10 relative z-10">
+          <motion.div {...reveal} className="flex flex-wrap items-end justify-between gap-6 border-b-2 border-forest/30 pb-6 mb-12">
+            <div>
+              <div className="eyebrow text-brass mb-4 flex items-center gap-4">
+                <span className="w-11 brass-rule inline-block"></span>
+                Publications & talks
+              </div>
+              <h2 className="font-heading font-semibold text-4xl md:text-5xl leading-tight">
+                Research, <span className="font-heading-italic text-forest">in print.</span>
+              </h2>
+            </div>
+            <span className="font-mono text-xs text-muted-foreground">peer-reviewed · presented</span>
+          </motion.div>
+
+          <div className="space-y-5">
+            {PUBLICATIONS.map((pub, i) => {
+              const Inner = (
+                <>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-3">
+                    <pub.icon size={16} className="text-brass" />
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">{pub.type}</span>
+                    <span className="font-mono text-[11px] text-muted-foreground">·</span>
+                    <span className="font-mono text-[11px] text-muted-foreground">{pub.year}</span>
+                    {pub.link && <ExternalLink size={13} className="text-brass ml-auto opacity-60 group-hover:opacity-100 transition-opacity" />}
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg md:text-xl leading-snug mb-2 group-hover:text-forest transition-colors">
+                    {pub.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed font-light">
+                    {pub.authors} · <span className="italic">{pub.venue}</span>
+                  </p>
+                  {(pub.note || pub.linkLabel) && (
+                    <div className="mt-4 pt-3 border-t border-ink/10 flex flex-wrap items-center gap-x-6 gap-y-1">
+                      {pub.note && <span className="text-[11px] font-bold uppercase tracking-wider text-brass">{pub.note}</span>}
+                      {pub.linkLabel && <span className="font-mono text-[11px] text-muted-foreground">{pub.linkLabel}</span>}
+                    </div>
+                  )}
+                </>
+              );
+              const cls = "block bg-background border border-ink/10 p-6 md:p-7 border-l-2 border-l-transparent hover:border-l-brass transition-colors group";
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 22 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ delay: i * 0.08 }}
+                  data-testid={`card-pub-${i}`}
+                >
+                  {pub.link ? (
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className={cls}>{Inner}</a>
+                  ) : (
+                    <div className={cls}>{Inner}</div>
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <motion.div {...reveal} className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+            {PUB_EXTRAS.map((ex, i) => (
+              <div key={i} className="flex items-center gap-4 bg-background border border-ink/10 px-6 py-5" data-testid={`card-pub-extra-${i}`}>
+                <ex.icon size={20} className="text-brass shrink-0" />
+                <span className="text-sm text-muted-foreground font-light">{ex.text}</span>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
