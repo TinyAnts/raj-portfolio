@@ -184,6 +184,23 @@ const PUBLICATIONS = [
   },
 ];
 
+const PROJECTS = [
+  {
+    name: "Radar",
+    fig: "A",
+    url: "https://radar.aivet.work/",
+    domain: "radar.aivet.work",
+    desc: "A self-initiated experiment from the aivet.work lab, built out of interest and open for anyone to explore.",
+  },
+  {
+    name: "VariantHound",
+    fig: "B",
+    url: "https://varianthound.aivet.work/",
+    domain: "varianthound.aivet.work",
+    desc: "Explainable, phenotype-aware gene prioritization for canine inherited disease research: ranking the variants most likely behind a dog's condition.",
+  },
+];
+
 const PUB_EXTRAS = [
   { icon: Presentation, text: "Invited keynote speaker, AI Vet Conference 2024 and 2025" },
   { icon: FlaskConical, text: "Two manuscripts in preparation (Hirszfeld Institute, 2026)" },
@@ -361,6 +378,7 @@ export default function Home() {
     { id: "experience", label: "Experience" },
     { id: "education", label: "Education" },
     { id: "publications", label: "Publications" },
+    { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
   ];
 
@@ -837,6 +855,56 @@ export default function Home() {
               </div>
             ))}
           </motion.div>
+        </div>
+      </section>
+
+      {/* 4c. SIDE PROJECTS */}
+      <section id="projects" className="py-24 bg-background relative overflow-hidden">
+        <FloatIcon Icon={Rocket} className="top-16 right-[4%] text-forest/10" size={44} delay="1.2s" />
+        <FloatIcon Icon={PawPrint} className="bottom-16 left-[3%] text-brass/15" size={40} delay="0.4s" />
+        <div className="container mx-auto px-6 md:px-10 relative z-10">
+          <motion.div {...reveal} className="flex flex-wrap items-end justify-between gap-6 border-b-2 border-forest/30 pb-6 mb-12">
+            <div>
+              <div className="eyebrow text-brass mb-4 flex items-center gap-4">
+                <span className="w-11 brass-rule inline-block"></span>
+                Side projects
+              </div>
+              <h2 className="font-heading font-semibold text-4xl md:text-5xl leading-tight">
+                Built out of <span className="font-heading-italic text-forest">curiosity.</span>
+              </h2>
+            </div>
+            <span className="font-mono text-xs text-muted-foreground">shipped for fun · worth a visit</span>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {PROJECTS.map((pr, i) => (
+              <motion.a
+                key={pr.name}
+                href={pr.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ delay: i * 0.08 }}
+                className="relative block bg-card border border-ink/15 p-7 hover:border-ink/35 transition-colors group"
+                data-testid={`card-project-${i}`}
+              >
+                <span className="absolute -top-[2px] -left-[2px] w-[18px] h-[18px] border-t-[2.5px] border-l-[2.5px] border-brass" aria-hidden="true"></span>
+                <span className="absolute -bottom-[2px] -right-[2px] w-[18px] h-[18px] border-b-[2.5px] border-r-[2.5px] border-brass" aria-hidden="true"></span>
+                <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">
+                  <span>fig. {pr.fig} · side project</span>
+                  <span className="text-forest font-bold flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-forest inline-block animate-pulse" aria-hidden="true"></span>live</span>
+                </div>
+                <h3 className="font-heading font-semibold text-2xl mb-2 group-hover:translate-x-1 transition-transform">{pr.name}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light mb-6">{pr.desc}</p>
+                <div className="flex items-center justify-between border-t border-ink/10 pt-4">
+                  <span className="font-mono text-xs text-brass">{pr.domain}</span>
+                  <span className="font-mono text-xs font-bold text-forest flex items-center gap-1">visit <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" /></span>
+                </div>
+              </motion.a>
+            ))}
+          </div>
         </div>
       </section>
 
