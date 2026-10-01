@@ -199,6 +199,14 @@ const PROJECTS = [
     domain: "varianthound.aivet.work",
     desc: "Explainable, phenotype-aware gene prioritization for canine inherited disease research: ranking the variants most likely behind a dog's condition.",
   },
+
+  {
+    name: "ReptileAtlas",
+    fig: "C",
+    url: "https://reptileatlas.aivet.work/",
+    domain: "reptileatlas.aivet.work",
+    desc: "From genes to patterns: an interactive workspace linking genetic evidence to reptile colour variation, chromatophore behaviour and computational pattern modelling.",
+  },
 ];
 
 const PUB_EXTRAS = [
@@ -876,7 +884,7 @@ export default function Home() {
             <span className="font-mono text-xs text-muted-foreground">shipped for fun · worth a visit</span>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {PROJECTS.map((pr, i) => (
               <motion.a
                 key={pr.name}
@@ -887,7 +895,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ delay: i * 0.08 }}
-                className="relative block bg-card border border-ink/15 p-7 hover:border-ink/35 transition-colors group"
+                className="relative flex flex-col bg-card border border-ink/15 p-7 hover:border-ink/35 transition-colors group"
                 data-testid={`card-project-${i}`}
               >
                 <span className="absolute -top-[2px] -left-[2px] w-[18px] h-[18px] border-t-[2.5px] border-l-[2.5px] border-brass" aria-hidden="true"></span>
@@ -898,7 +906,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-heading font-semibold text-2xl mb-2 group-hover:translate-x-1 transition-transform">{pr.name}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed font-light mb-6">{pr.desc}</p>
-                <div className="flex items-center justify-between border-t border-ink/10 pt-4">
+                <div className="flex items-center justify-between border-t border-ink/10 pt-4 mt-auto">
                   <span className="font-mono text-xs text-brass">{pr.domain}</span>
                   <span className="font-mono text-xs font-bold text-forest flex items-center gap-1">visit <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" /></span>
                 </div>

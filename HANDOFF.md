@@ -83,7 +83,9 @@ The `PUBLICATIONS` and `PROJECTS` arrays near the top of `Home.tsx` drive their
 sections. A second, smaller publications summary card also exists inside the skills
 section; if you add a publication, consider both places.
 
-Side projects currently list `radar.aivet.work` and `varianthound.aivet.work`.
+Side projects currently list `radar.aivet.work`, `varianthound.aivet.work` and
+`reptileatlas.aivet.work`. They render from the `PROJECTS` array; adding a fourth
+is just another entry, though the grid is tuned for three across on wide screens.
 **The Radar description is a placeholder.** Its site blocks automated readers, so
 nobody has been able to verify what it does. Ask the owner for one accurate line
 and replace it. VariantHound's description was verified from its live site:
@@ -108,10 +110,12 @@ and has not asked for it yet.
 
 These are the owner's standing preferences. Breaking them means redoing work.
 
-1. **Never use em-dashes or en-dashes (the long dash characters) in site copy.**
-   The owner considers them a tell that text was written by AI. Use commas,
-   colons, semicolons, or the middot separator instead. Check with a search for
-   the long dash characters before shipping.
+1. **Never use a long dash as sentence punctuation in site copy.**
+   The owner considers the em-dash a tell that text was written by AI. Use commas,
+   colons, semicolons, or the middot separator instead. Search for the em-dash
+   character before shipping; the correct count is zero.
+   One exception, already in use: the en-dash inside a numeric range such as
+   "2021 - 2026" is normal typography. Leave those alone.
 2. **No invented testimonials, reviews, or endorsements presented as real.**
    Placeholder social proof stays behind a flag that is off in production.
 3. **Free tiers only.** No paid subscriptions, no Stripe, no payment processors,
