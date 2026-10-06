@@ -207,6 +207,13 @@ const PROJECTS = [
     domain: "reptileatlas.aivet.work",
     desc: "From genes to patterns: an interactive workspace linking genetic evidence to reptile colour variation, chromatophore behaviour and computational pattern modelling.",
   },
+  {
+    name: "Plot Twist",
+    fig: "D",
+    url: "https://plottwist.aivet.work/",
+    domain: "plottwist.aivet.work",
+    desc: "Tell it what you have read and it draws you a hand-drawn flowchart to your next book, plus Plotdle, a daily guess-the-book game with five clues.",
+  },
 ];
 
 const PUB_EXTRAS = [
